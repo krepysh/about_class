@@ -2,14 +2,14 @@ import Menu
 
 
 def short_resources(coffe_needed,water_needed,milk_needed):
-    short_resources = []
+    short_resource = []
     if coffe_needed>Menu.INVENTORY['coffee']:
-        short_resources.append('coffee')
+        short_resource.append('coffee')
     if milk_needed>Menu.INVENTORY['milk']:
-        short_resources.append('milk')
+        short_resource.append('milk')
     if water_needed>Menu.INVENTORY['water']:
-        short_resources.append('water')
-    print(f"There is not enough {', '.join(short_resources)}")
+        short_resource.append('water')
+    print(f"There is not enough {', '.join(short_resource)}")
 
 def have_resources(coffe_needed,water_needed,milk_needed):
     if coffe_needed <= Menu.INVENTORY['coffee'] and water_needed <= Menu.INVENTORY['water'] and milk_needed <= Menu.INVENTORY['milk']:
