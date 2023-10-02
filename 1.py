@@ -14,7 +14,7 @@ MENU = {
         },
         'price': 2.39,
     },
-    'flat white': {
+    'cappuccino': {
         'ingredients':{
             'coffee': 24,
             'water': 60,
@@ -30,3 +30,22 @@ INVENTORY = {
     'milk': 300,
     'money': 0,
 }
+
+# def check()
+
+while True:
+    order = input("​What would you like? (espresso/latte/cappuccino): ")
+    if order == "Off":
+        print("coffee machine is Turned off")
+        break
+    elif order == "report":
+        print(INVENTORY)
+    elif order == "espresso":
+        if INVENTORY['coffee'] - MENU['espresso']['ingredients']['coffee'] > 0 :
+            print("okey")
+            INVENTORY['coffee'] = INVENTORY['coffee'] - MENU['espresso']['ingredients']['coffee']
+            print(INVENTORY, end=" ")
+        else:
+            print("Sorry there is not enough water")
+    # elif order == "latte":
+    # elif order == "cappuccino":
