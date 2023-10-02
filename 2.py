@@ -1,6 +1,11 @@
 from datetime import datetime
 
+class Patient:
+    
 
+
+
+    
 def send_sms(msg, phone):
     """Sends a given message to a given phone via SMS.
 
