@@ -52,11 +52,11 @@ class Coffee_Machine:
                 return False
         return True
     
-    def clean_input_money(input):
-        if input.isdigit() == False:
+    def clean_input_money(input_):
+        if input_.isdigit() == False:
             return 0
         else:
-            return input
+            return input_
         
     def process_coins(self):
         print("Please insert coins.")
