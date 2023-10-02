@@ -40,6 +40,7 @@ patient1 = Patient(
     "+6693932030",
 )
 
+
 print(patient1.greeting())
 
 #patient1.send_appointment_reminder(datetime(2023, 10, 13, 13, 0))
