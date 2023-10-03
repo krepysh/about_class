@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../about_class"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "oop-coffee-machine-start"
+	}
+}
