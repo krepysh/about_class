@@ -1,6 +1,8 @@
 # How to use this repository
 Fork it, clone your own fork locally, solve problems, and upload your solutions back to your repository. After that open PR against original branch.
 
+
+
 # Problem 1
 Your company asked you to create a coffee machine. Luckily you don't have to create a hardware, you can focus only on software part.
 You have been provided a detailed specification how it should work. The specification in 1_coffee_machine_requirements.pdf. 
