@@ -26,7 +26,6 @@ class CoolQuizBrain:
 
     def answercheck(self):
         
-
         for el in self.questions:
             self.question = el["question"]
             self.answer = el["correct_answer"]
