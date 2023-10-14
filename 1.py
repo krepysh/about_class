@@ -1,32 +1,26 @@
-MENU = {
-    'espresso': {
-        'ingredients': {
-            'coffee': 19,
-            'water': 35,
-        },
-        'price': 1.99,
-    },
-    'latte': {
-        'ingredients': {
-            'coffee': 24,
-            'water': 50,
-            'milk': 150,
-        },
-        'price': 2.39,
-    },
-    'flat white': {
-        'ingredients':{
-            'coffee': 24,
-            'water': 60,
-            'milk': 50,
-        },
-        'price': 3.19,
-    }
-}
+from coffee_machine import CoffeeMachine
 
-INVENTORY = {
-    'coffee': 100,
-    'water': 300,
-    'milk': 300,
-    'money': 0,
-}
+coffee_machine = CoffeeMachine()
+
+def start():
+    while True:
+        beverage = input('What would you like? (espresso/latte/flat white):')
+
+        if beverage == 'off':
+            break
+        try:
+            if coffee_machine.enough_resources_for_drink(beverage):
+                print(f'Beverage price: {coffee_machine.beverage_price(beverage)}')
+                while not coffee_machine.balance_enough_for(beverage):
+                    coin = input('Put coin(quarter/dime/nickel/pennie):')
+                    try:
+                        coffee_machine.top_up(coin)
+                        print(f"Current balance: {coffee_machine.current_balance()}")
+                    except AttributeError as coin_error:
+                        print(coin_error)
+                coffee_machine.buy_drink(beverage)
+                print(coffee_machine.report())
+        except AttributeError as beverage_error:
+            print(beverage_error)
+
+start()
